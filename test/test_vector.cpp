@@ -11,6 +11,8 @@ int main() {
     v.push_back(2);
     v.push_back(3);
     v.push_back(4);
-
-
+    stdd::vector<int>::iterator it = v.begin();
+    for (auto& each: v) {
+        std::cout << each << std::endl;
+    }
 }
