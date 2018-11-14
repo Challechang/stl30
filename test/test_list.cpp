@@ -3,6 +3,14 @@
 // Email: rbcheng@qq.com
 //
 #include "list"
+
+struct Parent {
+    std::string name;
+    int age;
+
+    Parent(std::string name, int age): name(name), age(age){}
+};
+
 int main() {
     stdd::list<int> m_list;
     m_list.push_back(1);
@@ -14,4 +22,14 @@ int main() {
 
     stdd::list<int>::iterator it = m_list.begin();
 
+
+    stdd::list<Parent> parent_list;
+    parent_list.push_back(Parent("parent1", 55));
+    parent_list.push_back(Parent("parent2", 56));
+    auto parent_it = parent_list.begin();
+    std::cout << parent_it->age << std::endl;
+
+    auto diff = stdd::distance(parent_list.begin(), parent_list.end());
+
+    std::cout << "diff: " << diff << std::endl;
 }
