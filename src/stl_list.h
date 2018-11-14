@@ -136,8 +136,8 @@ public:
   typedef __list_iterator<T, const T&, const T*> const_iterator;
 
 #ifdef __STL_CLASS_PARTIAL_SPECIALIZATION
-  typedef reverse_iterator<const_iterator> const_reverse_iterator;
-  typedef reverse_iterator<iterator> reverse_iterator;
+  typedef reverse_iterator<const_iterator> const_reverse_list_iterator;
+  typedef reverse_iterator<iterator> reverse_list_iterator;
 #else /* __STL_CLASS_PARTIAL_SPECIALIZATION */
   typedef reverse_bidirectional_iterator<const_iterator, value_type,
   const_reference, difference_type>
@@ -215,13 +215,13 @@ public:
   const_iterator begin() const { return (link_type)((*node).next); }
   iterator end() { return node; }
   const_iterator end() const { return node; }
-  reverse_iterator rbegin() { return reverse_iterator(end()); }
-  const_reverse_iterator rbegin() const { 
-    return const_reverse_iterator(end()); 
+  reverse_list_iterator rbegin() { return reverse_list_iterator(end()); }
+  const_reverse_list_iterator rbegin() const {
+    return const_reverse_list_iterator(end());
   }
-  reverse_iterator rend() { return reverse_iterator(begin()); }
-  const_reverse_iterator rend() const { 
-    return const_reverse_iterator(begin());
+  reverse_list_iterator rend() { return reverse_list_iterator(begin()); }
+  const_reverse_list_iterator rend() const {
+    return const_reverse_list_iterator(begin());
   } 
   bool empty() const { return node->next == node; }
   size_type size() const {
