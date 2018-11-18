@@ -79,7 +79,7 @@
  * default value.
  */
 
-__STL_BEGIN_NAMESPACE 
+__STL_BEGIN_NAMESPACE
 
 #if defined(__sgi) && !defined(__GNUC__) && (_MIPS_SIM != _MIPS_SIM_ABI32)
 #pragma set woff 1174
@@ -735,7 +735,7 @@ void deque<T, Alloc, BufSize>::insert(iterator pos,
 #endif /* __STL_MEMBER_TEMPLATES */
 
 template <class T, class Alloc, size_t BufSize>
-deque<T, Alloc, BufSize>::iterator 
+typename deque<T, Alloc, BufSize>::iterator
 deque<T, Alloc, BufSize>::erase(iterator first, iterator last) {
   if (first == start && last == finish) {
     clear();

@@ -30,7 +30,7 @@
 #include <stl_config.h>
 #include <stl_relops.h>
 #include <stddef.h>
-#include <iostream.h>
+#include <iostream>
 #include <stl_iterator.h>
 
 #endif /* __SGI_STL_ITERATOR */

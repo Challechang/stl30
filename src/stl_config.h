@@ -240,6 +240,10 @@
 # define __stl_assert(expr)
 #endif
 
+#if WIN32
+#define __STL_NO_DRAND48
+#endif
+
 #endif /* __STL_CONFIG_H */
 
 // Local Variables:

@@ -57,7 +57,7 @@ void return_temporary_buffer(T* p) {
 template <class ForwardIterator,
           class T 
 #ifdef __STL_CLASS_PARTIAL_SPECIALIZATION
-                  = iterator_traits<ForwardIterator>::value_type 
+                  = typename iterator_traits<ForwardIterator>::value_type
 #endif /* __STL_CLASS_PARTIAL_SPECIALIZATION */
          >
 class temporary_buffer {
