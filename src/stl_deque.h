@@ -270,8 +270,8 @@ public:                         // Iterators
 #endif /* __STL_NON_TYPE_TMPL_PARAM_BUG */
 
 #ifdef __STL_CLASS_PARTIAL_SPECIALIZATION
-  typedef reverse_iterator<const_iterator> const_reverse_iterator;
-  typedef reverse_iterator<iterator> reverse_iterator;
+  typedef reverse_iterator<const_iterator> const_deque_reverse_iterator;
+  typedef reverse_iterator<iterator> deque_reverse_iterator;
 #else /* __STL_CLASS_PARTIAL_SPECIALIZATION */
   typedef reverse_iterator<const_iterator, value_type, const_reference, 
                            difference_type>  
@@ -303,13 +303,13 @@ public:                         // Basic accessors
   const_iterator begin() const { return start; }
   const_iterator end() const { return finish; }
 
-  reverse_iterator rbegin() { return reverse_iterator(finish); }
-  reverse_iterator rend() { return reverse_iterator(start); }
-  const_reverse_iterator rbegin() const {
-    return const_reverse_iterator(finish);
+  deque_reverse_iterator rbegin() { return deque_reverse_iterator(finish); }
+  deque_reverse_iterator rend() { return deque_reverse_iterator(start); }
+  const_deque_reverse_iterator rbegin() const {
+    return const_deque_reverse_iterator(finish);
   }
-  const_reverse_iterator rend() const {
-    return const_reverse_iterator(start);
+  const_deque_reverse_iterator rend() const {
+    return const_deque_reverse_iterator(start);
   }
 
   reference operator[](size_type n) { return start[difference_type(n)]; }

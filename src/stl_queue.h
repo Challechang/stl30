@@ -31,6 +31,7 @@
 #ifndef __SGI_STL_INTERNAL_QUEUE_H
 #define __SGI_STL_INTERNAL_QUEUE_H
 
+#include "stl_deque.h"
 __STL_BEGIN_NAMESPACE
 
 #ifndef __STL_LIMITED_DEFAULT_TEMPLATES
